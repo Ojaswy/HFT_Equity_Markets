@@ -42,5 +42,6 @@ Integration: Replace deterministic `executed_k = alloc_k` with `E[e_k]` and use 
 #### At each snapshot attempts to execute a fixed no. of shares which are passed into the allocator
 ![alt text][r2a]
 ![alt text][r2b]
+
 [r2a]: https://github.com/Ojaswy/HFT_Equity_Markets/blob/main/Strategy/result2.png
 [r2b]: https://github.com/Ojaswy/HFT_Equity_Markets/blob/main/Strategy/res2_json.png

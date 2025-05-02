@@ -32,7 +32,15 @@ To model slippage and queue dynamics more accurately, incorporate a fill probabi
 Integration: Replace deterministic `executed_k = alloc_k` with `E[e_k]` and use `p_adj` in `compute_cost` for realistic execution risk. Adding this into the cost function yields allocations that account for realistic execution risks and dynamic market impact.
 
 ### RESULTS
+#### At each snapshot attempts to execute as many shares as the allocator tells to
+![alt text][r1a]
+![alt text][r1b]
 
-![alt text][logo]
+[r1a]: https://github.com/Ojaswy/HFT_Equity_Markets/blob/main/Strategy/result1.png
+[r1b]: https://github.com/Ojaswy/HFT_Equity_Markets/blob/main/Strategy/res1_json.png
 
-[logo]: https://github.com/Ojaswy/HFT_Equity_Markets/blob/main/Strategy/result1.png
+#### At each snapshot attempts to execute a fixed no. of shares which are passed into the allocator
+![alt text][r2a]
+![alt text][r2b]
+[r2a]: https://github.com/Ojaswy/HFT_Equity_Markets/blob/main/Strategy/result2.png
+[r2b]: https://github.com/Ojaswy/HFT_Equity_Markets/blob/main/Strategy/res2_json.png

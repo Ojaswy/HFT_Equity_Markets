@@ -3,8 +3,7 @@ This backtest implements a message‐by‐message Level‑1 feed (`l1_day.csv`),
 
 ### Approach
 1. **Data Preparation**: Deduplicate on `(ts_event, publisher_id)` to get one snapshot per venue per event. Resample into 10 ms intervals to align books.
-2. **Allocation**: At each snapshot, solve a grid‐search allocation across venues that minimizes
-   \[ \text{cost} + \lambda_{\text{under}} \times \text{(unfilled)} + \lambda_{\text{over}} \times \text{(overfilled)} + \theta_{\text{queue}} \times (\text{under}+\text{over}) \]
+2. **Allocation**: At each snapshot, solve a grid‐search allocation across venues that minimizes cost.
 3. **Execution Loop**: Fill up to the displayed ask size at each venue, roll any unfilled shares forward, until all 5 000 shares are filled or data ends.
 4. **Grid Search**: Sweep (λ_under, λ_over, θ_queue) triples to find the best parameters by savings vs. a best‐ask baseline.
 

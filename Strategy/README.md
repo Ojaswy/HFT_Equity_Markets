@@ -30,3 +30,9 @@ To model slippage and queue dynamics more accurately, incorporate a fill probabi
   4. **Slippage:** Adjust price `p_adj = p + γ·(E[e_k]/Q_k)·h` before cost computation.
 
 Integration: Replace deterministic `executed_k = alloc_k` with `E[e_k]` and use `p_adj` in `compute_cost` for realistic execution risk. Adding this into the cost function yields allocations that account for realistic execution risks and dynamic market impact.
+
+### RESULTS
+
+![alt text][logo]
+
+[logo]: https://github.com/Ojaswy/HFT_Equity_Markets/blob/main/Strategy/result1.png
